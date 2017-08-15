@@ -17,6 +17,8 @@ namespace ShibesBotCore
 
         private CommandHandler.CommandHandler _handler;
 
+        
+
         public async Task StartAsync()
         {
             _client = new DiscordSocketClient();
@@ -34,6 +36,7 @@ namespace ShibesBotCore
             await _handler.InitializeAsync(_client);
 
             await Task.Delay(-1);
+            
         }
     }
 }
