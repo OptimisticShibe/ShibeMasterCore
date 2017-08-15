@@ -1,0 +1,10 @@
+c:\users\rafiq.ramadan\documents\visual studio 2017\Projects\ShibesBotCore\ShibesBotCore\bin\Debug\netcoreapp1.1\ShibesBotCore.deps.json
+c:\users\rafiq.ramadan\documents\visual studio 2017\Projects\ShibesBotCore\ShibesBotCore\bin\Debug\netcoreapp1.1\ShibesBotCore.runtimeconfig.json
+c:\users\rafiq.ramadan\documents\visual studio 2017\Projects\ShibesBotCore\ShibesBotCore\bin\Debug\netcoreapp1.1\ShibesBotCore.runtimeconfig.dev.json
+c:\users\rafiq.ramadan\documents\visual studio 2017\Projects\ShibesBotCore\ShibesBotCore\bin\Debug\netcoreapp1.1\ShibesBotCore.dll
+c:\users\rafiq.ramadan\documents\visual studio 2017\Projects\ShibesBotCore\ShibesBotCore\obj\Debug\netcoreapp1.1\ShibesBotCore.csprojResolveAssemblyReference.cache
+c:\users\rafiq.ramadan\documents\visual studio 2017\Projects\ShibesBotCore\ShibesBotCore\obj\Debug\netcoreapp1.1\ShibesBotCore.AssemblyInfo.cs
+C:\Users\rafiq.ramadan\Documents\Visual Studio 2017\Projects\ShibesBotCore\ShibesBotCore\bin\Debug\netcoreapp1.1\ShibesBotCore.pdb
+C:\Users\rafiq.ramadan\Documents\Visual Studio 2017\Projects\ShibesBotCore\ShibesBotCore\obj\Debug\netcoreapp1.1\ShibesBotCore.csproj.CoreCompileInputs.cache
+C:\Users\rafiq.ramadan\Documents\Visual Studio 2017\Projects\ShibesBotCore\ShibesBotCore\obj\Debug\netcoreapp1.1\ShibesBotCore.dll
+C:\Users\rafiq.ramadan\Documents\Visual Studio 2017\Projects\ShibesBotCore\ShibesBotCore\obj\Debug\netcoreapp1.1\ShibesBotCore.pdb
