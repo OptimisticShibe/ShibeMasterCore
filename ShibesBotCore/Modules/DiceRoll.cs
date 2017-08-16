@@ -9,13 +9,20 @@ namespace ShibesBotCore.Modules
 {
     public class DiceRoll : ModuleBase<SocketCommandContext>
     {
+        //TODO: account for "d" in command
+        //TODO: fix order of messages from bot. Perhaps assign to strings?
         [Command("Roll")]
         public async Task RollDice(int numDice, int die) //might need to include error handling for putting "d" in front of number
         {
+            /*char[] deleteChars = { ' ', 'd', 'D' };
+            string[] inputText = input.Split(deleteChars);
+            int numDice = int.Parse(inputText[0]);
+            int die = int.Parse(inputText[2]);*/
+            int diceLimit = 15;
             Random random = new Random();
             // For all but d20
-            int[] validDice = { 4, 6, 8, 10, 12 };
-            if (validDice.Contains(die) && (numDice <= 8 && numDice > 0))
+            int[] validDice = { 4, 6, diceLimit, 10, 12 };
+            if (validDice.Contains(die) && (numDice <= diceLimit && numDice > 0))
             {
                 diceEmoji();
 
@@ -51,7 +58,7 @@ namespace ShibesBotCore.Modules
                 
             }
             // Coin flip
-            else if (die == 2 && (numDice <= 8 && numDice > 0))
+            else if (die == 2 && (numDice <= diceLimit && numDice > 0))
             {
                 coinFlipEmoji();
                 string result = null;
@@ -90,7 +97,7 @@ namespace ShibesBotCore.Modules
                 }
             }
             // d20 CODE HERE
-            else if (die == 20 && (numDice <= 8 && numDice > 0))
+            else if (die == 20 && (numDice <= diceLimit && numDice > 0))
             {
                 
                 string emojiExtra = null;
@@ -146,9 +153,9 @@ namespace ShibesBotCore.Modules
             else
             {
                 // Too many dice exception
-                if ((numDice > 8 || numDice < 1) && (validDice.Contains(die) || die == 2 || die == 20))
+                if ((numDice > diceLimit || numDice < 1) && (validDice.Contains(die) || die == 2 || die == 20))
                 {
-                    await Context.Channel.SendMessageAsync("Invalid dice number! Please roll/flip between 1 and 8 dice/coins at a time");
+                    await Context.Channel.SendMessageAsync($"Invalid dice number! Please roll/flip between 1 and {diceLimit} dice/coins at a time");
                 }
                 // Invalid die choice
                 else if (!validDice.Contains(die) && die != 2 && die != 20)
@@ -177,6 +184,8 @@ namespace ShibesBotCore.Modules
                 {
                     await Context.Channel.SendMessageAsync($"Rolling d{die}! :game_die:");
                 }
+                const int delay = 3000;
+                await Task.Delay(delay);
                 
             }
             async void coinFlipEmoji()
@@ -189,7 +198,9 @@ namespace ShibesBotCore.Modules
                 {
                     await Context.Channel.SendMessageAsync($"Flipping a coin! :money_with_wings:");
                 }
-                
+
+                const int delay = 3000;
+                await Task.Delay(delay);
             }
         }
     }
